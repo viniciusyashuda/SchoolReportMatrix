@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolReportMatrix", "SchoolReportMatrix\SchoolReportMatrix.csproj", "{060CA266-8EFA-4DBA-A4DA-127B43228C22}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{060CA266-8EFA-4DBA-A4DA-127B43228C22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{060CA266-8EFA-4DBA-A4DA-127B43228C22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{060CA266-8EFA-4DBA-A4DA-127B43228C22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{060CA266-8EFA-4DBA-A4DA-127B43228C22}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {71C9C21F-F55A-4BEE-B32E-E41C24284EDB}
+	EndGlobalSection
+EndGlobal
