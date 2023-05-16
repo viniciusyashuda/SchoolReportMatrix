@@ -8,14 +8,14 @@ namespace SchoolReportMatrix
         {
             int lines = 5, columns = 2;
             float[,] matrix = new float[lines, columns];
-            float[] subjectAvarages = new float[columns];
+            float[] subjectAverages = new float[columns];
 
             InsertGrades(lines, columns, matrix);
             ShowEntireSchoolReport(matrix);
-            CalculateStudentsGlobalAvarage(lines, columns, matrix);
-            CalculateSubjectsGlobalAvarage(lines, columns, matrix, subjectAvarages);
+            CalculateStudentsGlobalAverage(lines, columns, matrix);
+            CalculateSubjectsGlobalAverage(lines, columns, matrix, subjectAverages);
             GetLowerAndHigherGrades(lines, columns, matrix);
-            GetLowerAndHigherSubjectAvarage(columns, subjectAvarages);
+            GetLowerAndHigherSubjectAverage(columns, subjectAverages);
 
             Console.ReadKey();
         }
@@ -46,7 +46,7 @@ namespace SchoolReportMatrix
             }
         }
 
-        private static void CalculateStudentsGlobalAvarage(int lines, int columns, float[,] matrix)
+        private static void CalculateStudentsGlobalAverage(int lines, int columns, float[,] matrix)
         {
             Console.WriteLine("*** Média global dos alunos ***\n");
 
@@ -60,15 +60,15 @@ namespace SchoolReportMatrix
 
                     if (column == columns - 1)
                     {
-                        var globalAvarage = (float)Math.Round(studentGradesSum / columns, 2);
+                        var globalAverage = (float)Math.Round(studentGradesSum / columns, 2);
 
-                        Console.WriteLine("Média global do aluno " + (line + 1) + ": " + globalAvarage);
+                        Console.WriteLine("Média global do aluno " + (line + 1) + ": " + globalAverage);
                     }
                 }
             }
         }
 
-        private static void CalculateSubjectsGlobalAvarage(int lines, int columns, float[,] matrix, float[] subjectAvarages)
+        private static void CalculateSubjectsGlobalAverage(int lines, int columns, float[,] matrix, float[] subjectAverages)
         {
             Console.WriteLine("\n\n*** Média global das disciplinas ***\n");
 
@@ -82,11 +82,11 @@ namespace SchoolReportMatrix
 
                     if (line == lines - 1)
                     {
-                        var globalAvarage = (float)Math.Round(subjectGradesSum / lines, 2);
+                        var globalAverage = (float)Math.Round(subjectGradesSum / lines, 2);
 
-                        subjectAvarages[column] = globalAvarage;
+                        subjectAverages[column] = globalAverage;
 
-                        Console.WriteLine("Média global da disciplina " + (column + 1) + ": " + globalAvarage);
+                        Console.WriteLine("Média global da disciplina " + (column + 1) + ": " + globalAverage);
                     }
                 }
             }
@@ -147,9 +147,9 @@ namespace SchoolReportMatrix
             }
         }
 
-        private static void GetLowerAndHigherSubjectAvarage(int columns, float[] subjectAvarages)
+        private static void GetLowerAndHigherSubjectAverage(int columns, float[] subjectAverages)
         {
-            float lowerAvarage = 0, higherAvarage = 0;
+            float lowerAverage = 0, higherAverage = 0;
 
             Console.WriteLine("*** Menor e maior média de uma disciplina ***\n");
 
@@ -157,18 +157,18 @@ namespace SchoolReportMatrix
             {
                 if (i == 0)
                 {
-                    lowerAvarage = subjectAvarages[i];
-                    higherAvarage = subjectAvarages[i];
+                    lowerAverage = subjectAverages[i];
+                    higherAverage = subjectAverages[i];
                 }
 
-                if (subjectAvarages[i] < lowerAvarage)
-                    lowerAvarage = subjectAvarages[i];
+                if (subjectAverages[i] < lowerAverage)
+                    lowerAverage = subjectAverages[i];
 
-                if (subjectAvarages[i] > higherAvarage)
-                    higherAvarage = subjectAvarages[i];
+                if (subjectAverages[i] > higherAverage)
+                    higherAverage = subjectAverages[i];
             }
 
-            Console.WriteLine("Menor média de uma disciplina: " + lowerAvarage + "\nMaior média de uma disciplina: " + higherAvarage);
+            Console.WriteLine("Menor média de uma disciplina: " + lowerAverage + "\nMaior média de uma disciplina: " + higherAverage);
         }
     }
 }
